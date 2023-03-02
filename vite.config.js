@@ -32,6 +32,14 @@ export default defineConfig({
               dest: "static/webfonts",
             },
             {
+              src: "./node_modules/@fontsource/exo-2/files/**/*400*-normal*",
+              dest: "static/webfonts",
+            },
+            {
+              src: "./node_modules/@fontsource/exo-2/files/**/*700*-normal*",
+              dest: "static/webfonts",
+            },
+            {
               src: "./node_modules/@fontsource/raleway/files/**/*400*-normal*",
               dest: "static/webfonts",
             },

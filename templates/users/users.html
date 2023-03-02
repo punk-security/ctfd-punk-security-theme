@@ -62,9 +62,16 @@
                 {% endif %}
 
                 {% if user.oauth_id %}
-                  <a href="https://majorleaguecyber.org/u/{{ user.name }}">
-                    <span class="badge bg-primary ms-2">Official</span>
-                  </a>
+                  {% if integrations.mlc() %}
+                    <a href="https://majorleaguecyber.org/u/{{ user.name }}">
+                      <span class="badge bg-primary ms-2">Official</span>
+                    </a>
+                  {% endif %}
+                  {% if integrations.ctftime() %}
+                    <a href="https://ctftime.org/user/{{ user.oauth_id }}">
+                      <span class="badge badge-primary">CTFtime</span>
+                    </a>
+                  {% endif %}
                 {% endif %}
               </td>
 

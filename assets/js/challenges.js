@@ -163,13 +163,15 @@ Alpine.data("ChallengeBoard", () => ({
   },
 
   getCategories() {
+    const rainbow = ["red", "orange", "yellow", "green", "blue", "violet"];
+    let rainbow_idx = 0;
     const categories = [];
 
     this.challenges.forEach(challenge => {
       const { category } = challenge;
 
-      if (!categories.includes(category)) {
-        categories.push(category);
+      if (!categories.filter(([c, _]) => c == category).length) {
+        categories.push([category, 'category-color-' + (rainbow[rainbow_idx++] ?? 'green')]);
       }
     });
 

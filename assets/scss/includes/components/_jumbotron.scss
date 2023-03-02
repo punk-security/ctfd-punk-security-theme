@@ -4,6 +4,8 @@
 // Move down content because we have a fixed navbar that is 3.5rem tall
 main {
   padding-top: 3.5rem;
+  background-color: #242930;
+  color: white;
 }
 
 .jumbotron {
@@ -11,14 +13,39 @@ main {
   margin-bottom: 2rem;
   text-align: center;
 
-  background-color: var(--bs-dark);
+  background-color: #1d2024;
   color: var(--bs-white);
+  position: relative;
 }
 
 @media (min-width: 576px) {
   .jumbotron {
     padding: 4rem 2rem;
   }
+}
+
+nav {
+  background-color: #1d2024 !important;
+}
+
+// If main doesn't have a jumbotron, insert the rainbow before main (after the navbar)
+main:not(:has(.jumbotron))::before {
+  content: '';
+  height: 1px;
+  display: block;
+  background-image: linear-gradient(to right, #cc0f4f, #ec7026, #f9b617, #2da84d, #0f90cc, #593a8e);
+}
+
+// If main has a jumbotron, insert the rainbow after the jumbotron instead
+main:has(.jumbotron) .jumbotron::after {
+  content: '';
+  height: 1px;
+  display: block;
+  background-image: linear-gradient(to right, #cc0f4f, #ec7026, #f9b617, #2da84d, #0f90cc, #593a8e);
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
 }
 
 // @media (min-width: 768px) {

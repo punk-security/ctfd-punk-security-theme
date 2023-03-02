@@ -151,6 +151,9 @@ Alpine.data("TeamGraphs", () => ({
   },
 
   getCategoryBreakdown() {
+    const rainbow = ["#cc0f4f", "#ec7026", "#f9b617", "#2da84d", "#0f90cc", "#593a8e"];
+    let rainbow_idx = 0;
+
     let categories = [];
     let breakdown = {};
 
@@ -172,7 +175,7 @@ Alpine.data("TeamGraphs", () => ({
         name: property,
         count: breakdown[property],
         percent: (breakdown[property] / categories.length) * 100,
-        color: colorHash(property),
+        color: rainbow[rainbow_idx++] ?? colorHash(property),
       });
     }
 

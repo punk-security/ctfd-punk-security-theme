@@ -3,7 +3,7 @@
 
 // Center text in tables, after the first cell
 // Override with text-center on cells
-.table tr > td:not(:first-of-type) {
+.table tr>td:not(:first-of-type) {
   text-align: center !important;
 }
 
@@ -14,20 +14,28 @@ th {
 }
 
 // Add some default spacing
-.table > tbody > tr > td {
+.table>tbody>tr>td {
   padding: 0.8rem 1rem !important;
 }
 
 // Remove border line from thead of all tables
-.table > tbody {
+.table>tbody {
   border-top: none !important;
 }
 
 // Add some padding from the edge of table
-.table > thead > tr > td:first-of-type {
+.table>thead>tr>td:first-of-type {
   padding-left: 1rem !important;
 }
 
-.table > thead > th {
+.table>thead>th {
   white-space: nowrap;
+}
+
+.table {
+  color: white !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  color: white !important;
 }
