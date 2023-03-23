@@ -40,7 +40,7 @@
               <ul class="category-row">
                 <template x-for="(c, idx) in getChallenges(category)" :key="c.id">
                   <li>
-                    <button class="challenge-button btn btn-dark w-100 text-truncate my-3"
+                    <button class="challenge-button w-100 text-truncate my-3"
                       :class="(c.solved_by_me ? '' : 'challenge-unsolved') + ' ' + color" :value="c.id"
                       @click="loadChallenge(c.id)">
 
