@@ -17,7 +17,12 @@
 
 .category-flex-row .category-header {
   flex-grow: 1;
-  max-width: 25%;
+  width: 10rem;
+  flex: 0 0 auto;
+}
+
+h5 {
+  width: 10rem;
 }
 
 .category-flex-row .category-challenges {
@@ -28,50 +33,53 @@
   list-style: none;
   display: flex;
   gap: 5px;
+  flex-wrap: wrap;
 }
 
 .category-row li {
   display: inline-block;
   flex-grow: 1;
   flex-shrink: 1;
+  margin-bottom: 2px;
 }
 
 .challenge-button {
-  box-shadow: 3px 3px 3px var(--bs-secondary);
+  color: white;
+  height: 4rem;
+  width: auto;
   position: relative;
   overflow: visible !important;
   border-radius: 0;
-  box-shadow: none;
   margin: 0 !important;
   border: none;
 }
 
-.challenge-button .challenge-inner {
-  opacity: 0;
-  width: 0;
-  height: 0;
+.challenge-button .challenge-inner  {
+  opacity: 100;
+  width: auto;
+  height: auto;
   padding: 0 !important;
   margin: 0 !important;
+  display: inline-block;
 }
 
-.challenge-button:hover .challenge-inner {
-  position: absolute;
-  z-index: 1;
-  display: block;
-  background-color: black;
-  bottom: 100%;
-  left: 50%;
-  opacity: 1;
-  transition: opacity 0.1s;
-  width: 120px;
-  margin-left: -60px !important;
-  border: 1px solid white;
-  height: auto;
+.challenge-button div p {
+  display: none;
+}
+
+.challenge-unsolved:hover  {
+  background-color: var(--bs-secondary)  !important;
 }
 
 .challenge-unsolved {
   background-color: var(--bs-dark) !important;
-  border: none;
+  border: 1px solid grey;
+}
+
+/* Makes text show if challenge is still unsolved */
+.challenge-unsolved div p {
+  margin-bottom: 0.25rem;
+  display: block !important;
 }
 
 .category-color-red {
