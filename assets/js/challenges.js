@@ -164,7 +164,7 @@ Alpine.data("ChallengeBoard", () => ({
   },
 
   getCategories() {
-    const rainbow = ["red", "orange", "yellow", "green", "blue", "violet"];
+    const rainbow = ["red", "orange", "yellow", "green", "blue", "indigo"];
     let rainbow_idx = 0;
     const categories = [];
 
