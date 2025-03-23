@@ -216,11 +216,6 @@
     {% endif %}
 
     {% endif %}
-    {% if integrations.ctftime() %}
-    <a href="https://ctftime.org/team/{{ team.oauth_id }}">
-      <h3><span class="badge badge-primary">CTFtime</span></h3>
-    </a>
-    {% endif %}
     {% if team.affiliation %}
     <h3 class="d-inline-block">
       <span class="badge bg-primary">{{ team.affiliation }}</span>

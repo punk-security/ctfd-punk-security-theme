@@ -22,11 +22,6 @@
               <h3 class="d-inline-block mx-1"><span class="badge rounded-pill bg-primary">Official</span></h3>
             </a>
           {% endif %}
-          {% if integrations.ctftime() %}
-            <a href="https://ctftime.org/user/{{ user.oauth_id }}">
-              <h3><span class="badge badge-primary">CTFtime</span></h3>
-            </a>
-          {% endif %}
         {% endif %}
 
         {% if user.affiliation %}
