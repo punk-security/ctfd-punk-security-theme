@@ -44,20 +44,10 @@
                               <span class="badge bg-primary ms-2">Official</span>
                             </a>
                           {% endif %}
-                          {% if integrations.ctftime() %}
-                            <a href="https://ctftime.org/team/{{ standing.oauth_id }}">
-                              <span class="badge badge-primary">CTFtime</span>
-                            </a>
-                          {% endif %}
                         {% elif Configs.user_mode == 'users' %}
                           {% if integrations.mlc() %}
                             <a href="https://majorleaguecyber.org/u/{{ standing.name }}">
                               <span class="badge bg-primary ms-2">Official</span>
-                            </a>
-                          {% endif %}
-                          {% if integrations.ctftime() %}
-                            <a href="https://ctftime.org/user/{{ standing.oauth_id }}">
-                              <span class="badge badge-primary">CTFtime</span>
                             </a>
                           {% endif %}
                         {% endif %}
